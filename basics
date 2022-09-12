@@ -1,0 +1,9 @@
+get-module 
+ $myCount = 1
+while ($myCount -lt 5)
+>> {
+>> $message = "=== Pass " + $myCount + "---"
+>> $message
+>> get-process | select ProcessName, CPU| Sort-Object -Property CPU | select -last 5
+>> $myCount++
+>> }
